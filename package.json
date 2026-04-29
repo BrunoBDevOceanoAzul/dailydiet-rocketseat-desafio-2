@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "tsx watch src/server.ts",
+    "dev:web": "cd web && npm run dev",
     "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
     "build": "tsup src",
     "start": "node dist/server.js"
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^25.6.0",
+    "concurrently": "^9.2.1",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3"
