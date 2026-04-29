@@ -15,3 +15,7 @@ app.register(usersRoutes, {
 app.register(mealsRoutes, {
   prefix: 'meals',
 })
+
+app.get('/', async () => {
+  return { hello: 'Welcome to Daily Diet API!' }
+})
