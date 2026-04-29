@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+:root {
+  --color-green-dark: #639339;
+  --color-green-mid: #CBE4B4;
+  --color-green-light: #E5F0DB;
+
+  --color-red-dark: #BF3B44;
+  --color-red-mid: #F3BABD;
+  --color-red-light: #F4E6E7;
+
+  --color-gray-100: #1B1D1E;
+  --color-gray-200: #333638;
+  --color-gray-300: #5C6265;
+  --color-gray-400: #B9BBBC;
+  --color-gray-500: #DDDEDF;
+  --color-gray-600: #EFF0F0;
+  --color-gray-700: #FAFAFA;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: var(--color-gray-700);
+  color: var(--color-gray-200);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--color-gray-200);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gray-100);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-100);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-white);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-gray-200);
+}
+
+.input-group input, .input-group textarea {
+  padding: 0.875rem;
+  border: 1px solid var(--color-gray-500);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--color-gray-100);
+}
+
+.input-group input:focus, .input-group textarea:focus {
+  outline: 1px solid var(--color-gray-300);
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.radio-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.radio-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--color-gray-600);
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-gray-100);
+}
+
+.radio-btn.active.green {
+  background-color: var(--color-green-light);
+  border-color: var(--color-green-dark);
+}
+
+.radio-btn.active.red {
+  background-color: var(--color-red-light);
+  border-color: var(--color-red-dark);
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.circle.green {
+  background-color: var(--color-green-dark);
+}
+
+.circle.red {
+  background-color: var(--color-red-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gray-200);
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--color-gray-600);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: var(--color-gray-100);
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: var(--color-gray-200);
+}
+
+.card.green {
+  background-color: var(--color-green-light);
+}
+
+.card.red {
+  background-color: var(--color-red-light);
+}
+
+.icon-top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: inherit;
+}
+
+.icon-top-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: inherit;
+}
+
+.meal-list-section {
+  margin-top: 2.5rem;
+}
+
+.meal-list-section h3 {
+  font-size: 1rem;
+  color: var(--color-gray-100);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.meal-date {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-gray-100);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.meal-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--color-gray-500);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.meal-item:hover {
+  background-color: var(--color-gray-600);
+}
+
+.meal-time {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-gray-100);
+}
+
+.meal-divider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-gray-400);
+}
+
+.meal-name {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--color-gray-200);
+}
+
+.page-header {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.page-header h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-gray-100);
+}
+
+.page-content {
+  background-color: var(--color-gray-700);
+  border-radius: 24px 24px 0 0;
+  padding: 2rem 1.5rem;
+  min-height: calc(100vh - 100px);
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+}
+
+.bg-green { background-color: var(--color-green-light); }
+.bg-red { background-color: var(--color-red-light); }
+.bg-gray { background-color: var(--color-gray-500); }
+
+.details-name {
+  font-size: 1.25rem;
+  color: var(--color-gray-100);
+  margin-bottom: 0.5rem;
+}
+
+.details-description {
+  font-size: 1rem;
+  color: var(--color-gray-200);
+  margin-bottom: 1.5rem;
+}
+
+.details-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-gray-100);
+  margin-bottom: 0.25rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--color-gray-600);
+  font-size: 0.875rem;
+  color: var(--color-gray-100);
+  margin-top: 1.5rem;
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: linear-gradient(to top, var(--color-gray-700) 50%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
